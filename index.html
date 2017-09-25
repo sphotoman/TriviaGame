@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Total Photography Trivia!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+	
+<div class="container">
+	<h1>Total Photography Trivia!</h1>
+		<div id="startState"> 
+			<h3>Click button below when you are ready to begin. Choose the most correct answers before time runs out</h3>
+			<input type="button" name="button" value="Start Game" onclick="start()"> 
+		</div>
+		
+		<div id="gameState">
+			<div id="timer"><span>You have 20 seconds remainging!</span></div>
+			<div id="triviaQuestions" class="questons">
+				<form id="quiz" name="quiz">
+					<p class="question">1. Your friend gets a new DSLR... You Say, "What is a DSLR?" What does he then say?</p>
+					<input type="radio" name="q1" id="mc" value="dots_single_layer_revealed"> Dots Single Layer Revealed					
+					<input type="radio" name="q1" id="mc" value="double_salad_like_roast"> Double Salad Like Roast
+					<input type="radio" name="q1" id="mc" value="dual_sight_lens_refined"> Dual Sight Lens Refined
+					<input type="radio" name="q1" id="mc" value="digital_single_lens_reflex"> Digital Single Lens Reflex <br><br>
+					<p class="question">2. What gives you greatest DOF?</p>
+					<input type="radio" name="q2" id="mc" value="f4">f 4
+					<input type="radio" name="q2" id="mc" value="f8">f 8
+					<input type="radio" name="q2" id="mc" value="f72">f 72
+					<input type="radio" name="q2" id="mc" value="f22">f 22 <br><br>
+					<p class="question">3. What focal length that is considered ideal for a traditional portrait?</p>
+					<input type="radio" name="q3" id="mc" value="10mm">10mm
+					<input type="radio" name="q3" id="mc" value="50mm">50mm
+					<input type="radio" name="q3" id="mc" value="105mm">105mm
+					<input type="radio" name="q3" id="mc" value="300mm">300mm<br><br>
+					<p class="question">4. Ansel Adems in most known for his photography of what national park?</p>
+					<input type="radio" name="q4" id="mc" value="grand_canyon">Grand Canyon
+					<input type="radio" name="q4" id="mc" value="Yellowstone">Yellowstone
+					<input type="radio" name="q4" id="mc" value="Yosemite">Yosemite
+					<input type="radio" name="q4" id="mc" value="Glacier">Glacier<br><br>
+					<p class="question">5. If you had to buy an ND filter for a photography class... you would be looking for a</p>
+					<input type="radio" name="q5" id="mc" value="Neutral_Density">Neutral Density
+					<input type="radio" name="q5" id="mc" value="Non_Destructive">Non Destructive
+					<input type="radio" name="q5" id="mc" value="New_Digital">New Digital
+					<input type="radio" name="q5" id="mc" value="Natural_Diffusion">Natural Diffusion <br><br>
+					<p class="question">6. What color profile has the largest color space</p>
+					<input type="radio" name="q6" id="mc" value="sRGB">sRGB
+					<input type="radio" name="q6" id="mc" value="CMYK">CMYK
+					<input type="radio" name="q6" id="mc" value="Adobe1998">Adobe1998
+					<input type="radio" name="q6" id="mc" value="ProPhoto">ProPhoto<br><br>
+					
+
+
+					<input type="button" name="button" value="Grade my Answers" onclick="gradeQuiz()">
+				</form>
+			</div>
+			
+
+		
+
+		</div>
+		<div id="gameOverState">
+			<div id="contestentResults" class="results">Here are your Results:</div><br>
+			<div id="totalCorrect"><p>Correct</p></div><br>
+			<div id="totalIncorrect"><span></span></div><br>
+			<div id="totalUnanswered"><span></span></div><br><br>
+			<input type="button" name="button" value="Try Again?" onclick="start()"> <br>
+			
+			<a href="http:scottfaber.com"><p>Meet the Photographer who took this cool picture</p></a>
+
+		</div>
+
+	
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</div>
+</body>
+</html>
