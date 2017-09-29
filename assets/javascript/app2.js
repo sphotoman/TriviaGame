@@ -1,9 +1,28 @@
+
 var correct=0;
 var incorrect=0;
 var unanswered=0;
+var interval;
+
+function timer() {
+//Timer 1
+	var counter = 20;
+	interval = setInterval(function() {
+    	counter--;
+
+    console.log(counter);
+
+    document.getElementById("timer").innerHTML="You have " + counter + " seconds remaining!";
+    // Display 'counter' wherever you want to display it.
+    if (counter == 0) {
+        
+        gradeQuiz();
+    }
+}, 1000);	
 
 
 
+}
 function start() {
 	document.getElementById("gameState").style.display= "unset";
 	document.getElementById("startState").style.display= "none";
@@ -15,26 +34,14 @@ function start() {
 	console.log("number of correct: " + correct);
 	console.log("number of incorrect; " + incorrect);
 	console.log("number of unanswered: " + unanswered);
-//Timer
-	var counter = 20;
-	var interval = setInterval(function() {
-    	counter--;
-    console.log(counter);
-    document.getElementById("timer").innerHTML="You have " + counter + " seconds remaining!";
-    // Display 'counter' wherever you want to display it.
-    if (counter == 0) {
-        // Display a login box
-        clearInterval(interval);
-        gradeQuiz();
-    }
-}, 1000);	
 
-
-
+	// clearInterval(interval);
+	timer();
 }
 
 
 function gradeQuiz(){
+
 
 	var q1 = document.quiz.q1.value;
 	var q2 = document.quiz.q2.value;
@@ -43,6 +50,7 @@ function gradeQuiz(){
 	var q5 = document.quiz.q5.value;
 	var q6 = document.quiz.q6.value;
 	
+  clearInterval(interval);
 
 
 //queston 1
@@ -125,9 +133,9 @@ function gameOverState(){
 	document.getElementById("totalCorrect").innerHTML= "You got " + correct + " correct!";
 	document.getElementById("totalIncorrect").innerHTML= "You got " + incorrect + " incorrect!";
 	document.getElementById("totalUnanswered").innerHTML= "You got " + unanswered + " unanswered!";
-
+	
 	// document.getElementById("gameState").style.display= "none";
 	// document.getElementById("gameOverState").style.display= "none";
 	// document.getElementById("startState").style.display= "unset";
-}
 
+}
